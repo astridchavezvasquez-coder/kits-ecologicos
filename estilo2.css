@@ -1,0 +1,1274 @@
+
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f0fbff;
+    color: #31566a;
+}
+
+/* =====================================
+   MENÚ PRINCIPAL
+===================================== */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: white;
+    box-shadow: 0 4px 15px rgba(70,150,180,0.10);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #369ab9;
+}
+
+/* NAVEGACIÓN */
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #426a7b;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #1da7ce;
+    transform: translateY(-2px);
+}
+
+.menu .activo {
+    color: #1da7ce;
+}
+
+/* =====================================
+   PORTADA
+===================================== */
+
+.portada {
+    min-height: 520px;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #dff7ff,
+        #b8eaff,
+        #effcff
+    );
+}
+
+.portada-contenido {
+    max-width: 800px;
+}
+
+/* ETIQUETA */
+
+.etiqueta {
+    display: inline-block;
+    background: white;
+    color: #3299b8;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* TÍTULOS */
+
+.portada h1 {
+    font-size: 58px;
+    color: #268db1;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.portada p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #527486;
+    margin-bottom: 35px;
+}
+
+/* =====================================
+   BOTÓN GENERAL
+===================================== */
+
+.boton {
+    display: inline-block;
+    text-decoration: none;
+
+    background: linear-gradient(
+        135deg,
+        #35b6d9,
+        #278eb8
+    );
+
+    color: white;
+    padding: 17px 35px;
+    border-radius: 35px;
+    font-weight: bold;
+
+    box-shadow: 0 7px 18px rgba(39,142,184,0.25);
+    transition: all 0.35s ease;
+}
+
+.boton:hover {
+    transform: translateY(-6px) scale(1.05);
+
+    box-shadow: 0 12px 25px rgba(39,142,184,0.35);
+
+    background: linear-gradient(
+        135deg,
+        #278eb8,
+        #176f9b
+    );
+}
+
+/* =====================================
+   SECCIONES GENERALES
+===================================== */
+
+.seccion {
+    padding: 90px 8%;
+}
+
+/* TÍTULOS DE SECCIONES */
+
+.titulo {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.titulo span {
+    color: #35a6c6;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.titulo h2 {
+    font-size: 36px;
+    color: #268db1;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+/* LÍNEA DECORATIVA */
+
+.linea {
+    width: 80px;
+    height: 5px;
+    margin: 0 auto 25px;
+
+    background: linear-gradient(
+        135deg,
+        #35b6d9,
+        #278eb8
+    );
+
+    border-radius: 10px;
+}
+
+.titulo p {
+    color: #698796;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* =====================================
+   HISTORIA
+===================================== */
+
+.historia {
+    background: white;
+}
+
+.historia-contenido {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* IMAGEN DE LA HISTORIA */
+
+.historia-imagen {
+    width: 45%;
+}
+
+.historia-imagen img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+
+    border-radius: 35px;
+
+    box-shadow: 0 15px 35px rgba(50,130,160,0.20);
+
+    transition: transform 0.35s ease;
+}
+
+.historia-imagen img:hover {
+    transform: scale(1.03);
+}
+
+/* TEXTO DE LA HISTORIA */
+
+.historia-texto {
+    flex: 1;
+}
+
+.historia-texto h3 {
+    color: #298fb0;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.historia-texto p {
+    color: #66818e;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+/* =====================================
+   MISIÓN Y VISIÓN
+===================================== */
+
+.mision-vision {
+    padding: 90px 8%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+
+    background: linear-gradient(
+        135deg,
+        #e2f8ff,
+        #c8efff
+    );
+}
+
+/* TARJETAS */
+
+.tarjeta-info {
+    background: white;
+    padding: 45px 35px;
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(65,145,170,0.10);
+
+    transition: 0.35s ease;
+}
+
+.tarjeta-info:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 15px 30px rgba(65,145,170,0.20);
+}
+
+/* ICONOS */
+
+.icono {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* TEXTOS */
+
+.tarjeta-info h2 {
+    color: #298fb0;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.tarjeta-info p {
+    color: #66818e;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* =====================================
+   VALORES
+===================================== */
+
+.valores {
+    text-align: center;
+    background: white;
+}
+
+/* CUADRÍCULA */
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* TARJETAS DE VALORES */
+
+.valor {
+    background: #f8fdff;
+    padding: 35px 25px;
+    border-radius: 25px;
+
+    box-shadow: 0 8px 25px rgba(65,145,170,0.10);
+
+    transition: 0.35s ease;
+}
+
+.valor:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 15px 30px rgba(65,145,170,0.20);
+}
+
+/* ICONOS DE VALORES */
+
+.valor span {
+    display: block;
+    font-size: 43px;
+    margin-bottom: 20px;
+}
+
+/* TEXTOS DE VALORES */
+
+.valor h3 {
+    color: #298fb0;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.valor p {
+    color: #66818e;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* =====================================
+   EQUIPO
+===================================== */
+
+.equipo {
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #f0fbff,
+        #e0f6ff,
+        #ffffff
+    );
+}
+
+/* CUADRÍCULA DEL EQUIPO */
+
+.equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* TARJETAS DE PERSONAS */
+
+.persona {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+
+    box-shadow: 0 8px 22px rgba(65,145,170,0.12);
+
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.persona:hover {
+    transform: translateY(-10px) scale(1.03);
+
+    box-shadow: 0 18px 35px rgba(39,142,184,0.25);
+}
+
+/* FOTOGRAFÍAS */
+
+.persona img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    margin-bottom: 20px;
+
+    transition: transform 0.4s ease;
+}
+
+.persona:hover img {
+    transform: scale(1.02);
+}
+
+/* NOMBRES */
+
+.persona h3 {
+    color: #298fb0;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.persona p {
+    color: #66818e;
+    font-size: 16px;
+}
+
+/* =====================================
+   FRASE FINAL
+===================================== */
+
+.frase-final {
+    padding: 75px 8%;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #dff7ff,
+        #b8eaff,
+        #effcff
+    );
+}
+
+.frase-final h2 {
+    color: #268db1;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.frase-final p {
+    color: #527486;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* =====================================
+   PIE DE PÁGINA
+===================================== */
+
+footer {
+    text-align: center;
+    padding: 30px;
+
+    background: #278eb1;
+    color: white;
+
+    line-height: 1.8;
+}
+
+footer h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+footer img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* =====================================
+   ADAPTACIÓN A TABLETS
+===================================== */
+
+@media (max-width: 950px) {
+
+    .historia-contenido {
+        flex-direction: column;
+    }
+
+    .historia-imagen {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .historia-texto {
+        width: 100%;
+    }
+
+    .valores-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* =====================================
+   ADAPTACIÓN A CELULARES
+===================================== */
+
+@media (max-width: 850px) {
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .portada {
+        padding: 65px 7%;
+    }
+
+    .portada h1 {
+        font-size: 43px;
+    }
+
+    .portada p {
+        font-size: 16px;
+    }
+
+    .mision-vision {
+        grid-template-columns: 1fr;
+    }
+
+    .equipo-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .titulo h2 {
+        font-size: 29px;
+    }
+
+}
+
+/* =====================================
+   CELULARES PEQUEÑOS
+===================================== */
+
+@media (max-width: 600px) {
+
+    .seccion {
+        padding: 65px 7%;
+    }
+
+    .mision-vision {
+        padding: 65px 7%;
+    }
+
+    .valores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portada h1 {
+        font-size: 36px;
+    }
+
+    .portada p {
+        font-size: 16px;
+    }
+
+    .historia-imagen img {
+        height: 280px;
+    }
+
+    .persona img {
+        height: 280px;
+    }
+
+    .frase-final h2 {
+        font-size: 29px;
+    }
+
+    .frase-final p {
+        font-size: 16px;
+    }
+
+    .logo h2 {
+        font-size: 21px;
+    }
+
+}
+
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f0fbff;
+    color: #31566a;
+}
+
+/* =====================================
+   MENÚ PRINCIPAL
+===================================== */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: white;
+    box-shadow: 0 4px 15px rgba(70,150,180,0.10);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #369ab9;
+}
+
+/* NAVEGACIÓN */
+
+.menu {
+    display: flex;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #426a7b;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #1da7ce;
+    transform: translateY(-2px);
+}
+
+.menu .activo {
+    color: #1da7ce;
+}
+
+/* =====================================
+   PORTADA
+===================================== */
+
+.portada {
+    min-height: 520px;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #dff7ff,
+        #b8eaff,
+        #effcff
+    );
+}
+
+.portada-contenido {
+    max-width: 800px;
+}
+
+/* ETIQUETA */
+
+.etiqueta {
+    display: inline-block;
+    background: white;
+    color: #3299b8;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* TÍTULOS */
+
+.portada h1 {
+    font-size: 58px;
+    color: #268db1;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.portada p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #527486;
+    margin-bottom: 35px;
+}
+
+/* =====================================
+   BOTÓN GENERAL
+===================================== */
+
+.boton {
+    display: inline-block;
+    text-decoration: none;
+
+    background: linear-gradient(
+        135deg,
+        #35b6d9,
+        #278eb8
+    );
+
+    color: white;
+    padding: 17px 35px;
+    border-radius: 35px;
+    font-weight: bold;
+
+    box-shadow: 0 7px 18px rgba(39,142,184,0.25);
+    transition: all 0.35s ease;
+}
+
+.boton:hover {
+    transform: translateY(-6px) scale(1.05);
+
+    box-shadow: 0 12px 25px rgba(39,142,184,0.35);
+
+    background: linear-gradient(
+        135deg,
+        #278eb8,
+        #176f9b
+    );
+}
+
+/* =====================================
+   SECCIONES GENERALES
+===================================== */
+
+.seccion {
+    padding: 90px 8%;
+}
+
+/* TÍTULOS DE SECCIONES */
+
+.titulo {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.titulo span {
+    color: #35a6c6;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.titulo h2 {
+    font-size: 36px;
+    color: #268db1;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+/* LÍNEA DECORATIVA */
+
+.linea {
+    width: 80px;
+    height: 5px;
+    margin: 0 auto 25px;
+
+    background: linear-gradient(
+        135deg,
+        #35b6d9,
+        #278eb8
+    );
+
+    border-radius: 10px;
+}
+
+.titulo p {
+    color: #698796;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* =====================================
+   HISTORIA
+===================================== */
+
+.historia {
+    background: white;
+}
+
+.historia-contenido {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* IMAGEN DE LA HISTORIA */
+
+.historia-imagen {
+    width: 45%;
+}
+
+.historia-imagen img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+
+    border-radius: 35px;
+
+    box-shadow: 0 15px 35px rgba(50,130,160,0.20);
+
+    transition: transform 0.35s ease;
+}
+
+.historia-imagen img:hover {
+    transform: scale(1.03);
+}
+
+/* TEXTO DE LA HISTORIA */
+
+.historia-texto {
+    flex: 1;
+}
+
+.historia-texto h3 {
+    color: #298fb0;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.historia-texto p {
+    color: #66818e;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+/* =====================================
+   MISIÓN Y VISIÓN
+===================================== */
+
+.mision-vision {
+    padding: 90px 8%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+
+    background: linear-gradient(
+        135deg,
+        #e2f8ff,
+        #c8efff
+    );
+}
+
+/* TARJETAS */
+
+.tarjeta-info {
+    background: white;
+    padding: 45px 35px;
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(65,145,170,0.10);
+
+    transition: 0.35s ease;
+}
+
+.tarjeta-info:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 15px 30px rgba(65,145,170,0.20);
+}
+
+/* ICONOS */
+
+.icono {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* TEXTOS */
+
+.tarjeta-info h2 {
+    color: #298fb0;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.tarjeta-info p {
+    color: #66818e;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* =====================================
+   VALORES
+===================================== */
+
+.valores {
+    text-align: center;
+    background: white;
+}
+
+/* CUADRÍCULA */
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* TARJETAS DE VALORES */
+
+.valor {
+    background: #f8fdff;
+    padding: 35px 25px;
+    border-radius: 25px;
+
+    box-shadow: 0 8px 25px rgba(65,145,170,0.10);
+
+    transition: 0.35s ease;
+}
+
+.valor:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 15px 30px rgba(65,145,170,0.20);
+}
+
+/* ICONOS DE VALORES */
+
+.valor span {
+    display: block;
+    font-size: 43px;
+    margin-bottom: 20px;
+}
+
+/* TEXTOS DE VALORES */
+
+.valor h3 {
+    color: #298fb0;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.valor p {
+    color: #66818e;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* =====================================
+   EQUIPO
+===================================== */
+
+.equipo {
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #f0fbff,
+        #e0f6ff,
+        #ffffff
+    );
+}
+
+/* CUADRÍCULA DEL EQUIPO */
+
+.equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* TARJETAS DE PERSONAS */
+
+.persona {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+
+    box-shadow: 0 8px 22px rgba(65,145,170,0.12);
+
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.persona:hover {
+    transform: translateY(-10px) scale(1.03);
+
+    box-shadow: 0 18px 35px rgba(39,142,184,0.25);
+}
+
+/* FOTOGRAFÍAS */
+
+.persona img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    margin-bottom: 20px;
+
+    transition: transform 0.4s ease;
+}
+
+.persona:hover img {
+    transform: scale(1.02);
+}
+
+/* NOMBRES */
+
+.persona h3 {
+    color: #298fb0;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.persona p {
+    color: #66818e;
+    font-size: 16px;
+}
+
+/* =====================================
+   FRASE FINAL
+===================================== */
+
+.frase-final {
+    padding: 75px 8%;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #dff7ff,
+        #b8eaff,
+        #effcff
+    );
+}
+
+.frase-final h2 {
+    color: #268db1;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.frase-final p {
+    color: #527486;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* =====================================
+   PIE DE PÁGINA
+===================================== */
+
+footer {
+    text-align: center;
+    padding: 30px;
+
+    background: #278eb1;
+    color: white;
+
+    line-height: 1.8;
+}
+
+footer h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+footer img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* =====================================
+   ADAPTACIÓN A TABLETS
+===================================== */
+
+@media (max-width: 950px) {
+
+    .historia-contenido {
+        flex-direction: column;
+    }
+
+    .historia-imagen {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .historia-texto {
+        width: 100%;
+    }
+
+    .valores-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* =====================================
+   ADAPTACIÓN A CELULARES
+===================================== */
+
+@media (max-width: 850px) {
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .portada {
+        padding: 65px 7%;
+    }
+
+    .portada h1 {
+        font-size: 43px;
+    }
+
+    .portada p {
+        font-size: 16px;
+    }
+
+    .mision-vision {
+        grid-template-columns: 1fr;
+    }
+
+    .equipo-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .titulo h2 {
+        font-size: 29px;
+    }
+
+}
+
+/* =====================================
+   CELULARES PEQUEÑOS
+===================================== */
+
+@media (max-width: 600px) {
+
+    .seccion {
+        padding: 65px 7%;
+    }
+
+    .mision-vision {
+        padding: 65px 7%;
+    }
+
+    .valores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portada h1 {
+        font-size: 36px;
+    }
+
+    .portada p {
+        font-size: 16px;
+    }
+
+    .historia-imagen img {
+        height: 280px;
+    }
+
+    .persona img {
+        height: 280px;
+    }
+
+    .frase-final h2 {
+        font-size: 29px;
+    }
+
+    .frase-final p {
+        font-size: 16px;
+    }
+
+    .logo h2 {
+        font-size: 21px;
+    }
+
+}

@@ -1,0 +1,470 @@
+
+
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f0fbff;
+    color: #31566a;
+}
+
+/* =====================================
+   MENÚ PRINCIPAL
+===================================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: white;
+    box-shadow: 0 4px 15px rgba(70,150,180,0.10);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #369ab9;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #426a7b;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #1da7ce;
+}
+
+/* =====================================
+   PORTADA
+===================================== */
+
+.hero {
+    min-height: 600px;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #dff7ff,
+        #b8eaff,
+        #effcff
+    );
+}
+
+.contenido {
+    max-width: 570px;
+}
+
+.etiqueta {
+    background: white;
+    color: #3299b8;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 58px;
+    color: #268db1;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 27px;
+    color: #426b80;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #527486;
+    margin-bottom: 35px;
+}
+
+/* =====================================
+   IMAGEN PRINCIPAL
+===================================== */
+
+.imagen {
+    width: 42%;
+}
+
+.imagen img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 35px;
+    box-shadow: 0 15px 35px rgba(50,130,160,0.20);
+}
+
+/* =====================================
+   BOTONES GENERALES
+===================================== */
+
+.boton {
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(135deg, #35b6d9, #278eb8);
+    color: white;
+    padding: 17px 35px;
+    border-radius: 35px;
+    font-weight: bold;
+    box-shadow: 0 7px 18px rgba(39,142,184,0.25);
+    transition: all 0.35s ease;
+}
+
+.boton:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(39,142,184,0.35);
+    background: linear-gradient(135deg, #278eb8, #176f9b);
+}
+
+/* =====================================
+   BENEFICIOS
+===================================== */
+
+.beneficios {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.beneficios h2,
+.nosotros h2 {
+    font-size: 36px;
+    color: #268db1;
+    margin-bottom: 18px;
+}
+
+.descripcion {
+    color: #698796;
+    font-size: 17px;
+    margin-bottom: 50px;
+}
+
+/* TARJETAS DE BENEFICIOS */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.tarjeta {
+    background: white;
+    padding: 40px 28px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(65,145,170,0.10);
+    transition: 0.35s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(65,145,170,0.20);
+}
+
+.icono {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.tarjeta h3 {
+    color: #298fb0;
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.tarjeta p {
+    color: #66818e;
+    line-height: 1.8;
+}
+
+/* =====================================
+   CATÁLOGO DIGITAL
+===================================== */
+
+.catalogo {
+    padding: 90px 8%;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #f0fbff,
+        #e0f6ff,
+        #ffffff
+    );
+}
+
+.catalogo h2 {
+    font-size: 36px;
+    color: #268db1;
+    margin-bottom: 18px;
+}
+
+.catalogo .descripcion {
+    color: #698796;
+    font-size: 17px;
+    margin-bottom: 50px;
+    line-height: 1.8;
+}
+
+/* =====================================
+   CUADRÍCULA CON CSS GRID
+===================================== */
+
+.productos {
+    display: grid;
+
+    /* TRES COLUMNAS EN COMPUTADORA */
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* =====================================
+   TARJETAS DE PRODUCTOS
+===================================== */
+
+.producto {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 22px rgba(65,145,170,0.12);
+
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+/* EFECTO HOVER: ESCALA Y SOMBRA */
+
+.producto:hover {
+    transform: translateY(-10px) scale(1.03);
+
+    box-shadow: 0 18px 35px rgba(39,142,184,0.25);
+}
+
+/* =====================================
+   IMÁGENES DE PRODUCTOS
+===================================== */
+
+.producto img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+.producto:hover img {
+    transform: scale(1.06);
+}
+
+/* =====================================
+   INFORMACIÓN DEL PRODUCTO
+===================================== */
+
+.info-producto {
+    padding: 25px;
+}
+
+.info-producto h3 {
+    color: #298fb0;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.info-producto p {
+    color: #66818e;
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 75px;
+    margin-bottom: 15px;
+}
+
+/* =====================================
+   PRECIOS
+===================================== */
+
+.precio {
+    display: block;
+    color: #218db3;
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* =====================================
+   BOTÓN DE COMPRA
+===================================== */
+
+.btn-producto {
+    display: inline-block;
+    text-decoration: none;
+
+    background: linear-gradient(
+        135deg,
+        #35b6d9,
+        #278eb8
+    );
+
+    color: white;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+.btn-producto:hover {
+    background: linear-gradient(
+        135deg,
+        #278eb8,
+        #176f9b
+    );
+
+    transform: scale(1.08);
+
+    box-shadow: 0 7px 18px rgba(39,142,184,0.30);
+}
+
+/* =====================================
+   NOSOTROS
+===================================== */
+
+.nosotros {
+    text-align: center;
+    padding: 85px 12%;
+
+    background: linear-gradient(
+        135deg,
+        #e2f8ff,
+        #c8efff
+    );
+}
+
+.nosotros p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.9;
+    font-size: 17px;
+    color: #527486;
+}
+
+/* =====================================
+   PIE DE PÁGINA
+===================================== */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #278eb1;
+    color: white;
+    line-height: 1.8;
+}
+
+/* =====================================
+   ADAPTACIÓN A TABLETS
+===================================== */
+
+@media (max-width: 950px) {
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* =====================================
+   ADAPTACIÓN A CELULARES
+===================================== */
+
+@media (max-width: 850px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 65px 7%;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .imagen {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficios h2,
+    .nosotros h2 {
+        font-size: 29px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .catalogo {
+        padding: 65px 7%;
+    }
+
+    .catalogo h2 {
+        font-size: 29px;
+    }
+
+    .producto img {
+        height: 230px;
+    }
+
+}
